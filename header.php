@@ -1,14 +1,3 @@
-<?php
-/**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-?>
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
@@ -16,7 +5,7 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>Worthy | Free Powerful Theme by HtmlCoder</title>
+		<title><?php bloginfo( 'name' ); ?></title>
 		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
 		<meta name="author" content="htmlcoder.me">
 
@@ -63,7 +52,7 @@
 
 								<!-- logo -->
 								<div class="logo smooth-scroll">
-									<a href="#banner"><img id="logo" src="images/logo.png" alt="Worthy"></a>
+									<a href="#banner"><img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Worthy"></a>
 								</div>
 
 								<!-- name-and-slogan -->
