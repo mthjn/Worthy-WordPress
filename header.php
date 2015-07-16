@@ -8,83 +8,136 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+?>
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Worthy | Free Powerful Theme by HtmlCoder</title>
+		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
 
-	<!--[if lt IE 9]>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
-	<![endif]-->
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" rel="stylesheet">
+
+		<!-- Custom css -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/custom.css" rel="stylesheet">
+		<?php wp_head(); ?>
+	</head>
+
+		<body class="no-trans">
+			<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+			<!-- header start -->
+			<!-- ================ -->
+			<header class="header fixed clearfix navbar navbar-fixed-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+
+							<!-- header-left start -->
+							<!-- ================ -->
+							<div class="header-left clearfix">
+
+								<!-- logo -->
+								<div class="logo smooth-scroll">
+									<a href="#banner"><img id="logo" src="images/logo.png" alt="Worthy"></a>
+								</div>
+
+								<!-- name-and-slogan -->
+								<div class="site-name-and-slogan smooth-scroll">
+									<div class="site-name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></div>
+									<div class="site-slogan"><a target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'description' ); ?></a></div>
+								</div>
+
+							</div>
+							<!-- header-left end -->
+
+						</div>
+						<div class="col-md-8">
+
+							<!-- header-right start -->
+							<!-- ================ -->
+							<div class="header-right clearfix">
+
+								<!-- main-navigation start -->
+								<!-- ================ -->
+								<div class="main-navigation animated">
+
+									<!-- navbar start -->
+									<!-- ================ -->
+									<nav class="navbar navbar-default" role="navigation">
+										<div class="container-fluid">
+
+											<!-- Toggle get grouped for better mobile display -->
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+											</div>
+
+											<?php
+												$defaults = array(
+													'theme_location'  => '',
+													'menu'            => 'Main',
+													'container'       => 'div',
+													'container_class' => 'collapse navbar-collapse scrollspy smooth-scroll',
+													'container_id'    => 'navbar-collapse-1',
+													'menu_class'      => 'nav navbar-nav navbar-right',
+													'menu_id'         => '',
+													'echo'            => true,
+													'fallback_cb'     => 'wp_page_menu',
+													'before'          => '',
+													'after'           => '',
+													'link_before'     => '',
+													'link_after'      => '',
+													'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+													'depth'           => 0,
+													'walker'          => new Top_Walker_Nav_Menu()
+												);
+
+												wp_nav_menu( $defaults );
+
+											?>
 
 
-	<!-- Bootstrap Core CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>-child/css/bootstrap.min.css" rel="stylesheet">
+										</div>
+									</nav>
+									<!-- navbar end -->
 
-    <!-- Custom CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>-child/css/clean-blog.min.css" rel="stylesheet">
+								</div>
+								<!-- main-navigation end -->
 
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+							</div>
+							<!-- header-right end -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-	<?php wp_head(); ?>
-</head>
-
-
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php bloginfo( 'name' ); ?> </a>
-            </div>
-
-						<?php
-							$defaults = array(
-								'theme_location'  => '',
-								'menu'            => 'Main',
-								'container'       => 'div',
-								'container_class' => 'collapse navbar-collapse',
-								'container_id'    => 'bs-example-navbar-collapse-1',
-								'menu_class'      => 'nav navbar-nav navbar-right',
-								'menu_id'         => '',
-								'echo'            => true,
-								'fallback_cb'     => 'wp_page_menu',
-								'before'          => '',
-								'after'           => '',
-								'link_before'     => '',
-								'link_after'      => '',
-								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'           => 0,
-								'walker'          => new Top_Walker_Nav_Menu()
-							);
-
-							wp_nav_menu( $defaults );
-
-						?>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-  
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- header end -->
