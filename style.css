@@ -1,0 +1,20 @@
+/*
+Theme Name: twentyfifteen-child
+Description: UhUh is a vanilla base starter theme created for blog
+Author: Neil Gee
+Author URI: http://www.coolestguidesontheplanet.com/
+Version: 0.0.1
+Tags: Contains regular Widget areas as well as preheaderwrap, home page Hero area, optin wrap and pre-footer widget content wrap
+Template: twentyfifteen
+*/
+
+/* general */
+a{color:#2A2929;text-decoration:none}
+a:hover,.post-preview>a:hover, .post-preview>a:focus{color:#ddd}
+.post-thumb img, .content img{width:100%;  padding: 50px 0 65px;}
+.page{margin-top:100px}
+/* header */
+.site-heading a {text-decoration:none;color:white}
+
+/*footer*/
+.menu ul, .menu li, ul.menu {list-style-type: none;text-align: center;padding-left: 0;}
