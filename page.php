@@ -1,32 +1,32 @@
-<?php
-/**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-
-get_header(); ?>
-
-
-
-
-
-
-<?php 	while ( have_posts() ) : the_post(); ?>
+<?php get_header(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
+<!-- insert into wp head -->
+<script>
+$(document).ready(function(){
+  $(".page-image").backstretch('<?php	if ( has_post_thumbnail() ) { $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); echo $url;}?>');
+});
+</script>
+<!--this needs a metabox -->
+			  <div id="banner" class="banner">
+			    <div class="page-image"></div>
+			    <div class="banner-caption">
+			      <div class="container">
+			        <div class="row">
+			          <div class="col-md-8 col-md-offset-2">
+			            <h1 class="text-center"><?php the_title();?></h1>
+			            <div class="lead text-center"><?php the_excerpt();?></div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
 <!-- Page Header -->
-<!-- Set your background image for this header on the line below. -->
 <header class="intro-header" style="background:#c3c3c3">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 							<div class="site-heading">
-								<h1> <?php the_title();?> </h1>
+								<h3><?php the_title();?></h3>
 							</div>
             </div>
         </div>
@@ -35,22 +35,12 @@ get_header(); ?>
 	<div class="container page">
 			<div class="row">
 					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-								<?php echo '<div class="features_items"><h2 class="title text-center">'.get_the_title().'</h2>';
-								if ( has_post_thumbnail() ) {
-								  $arg = array ('class' => "alignleft");
-								  the_post_thumbnail("medium", $arg);
-								}
-									echo '<div class="content">';
-								 	the_content();
-								 	echo '</div>';
-								echo '</div>';
-								endwhile;
-						?>
+            <div class="content">
+								<?php the_content(); ?>
 					</div>
 			</div>
 	</div>
 
 	<hr>
-
+<?php endwhile; ?>
 <?php get_footer(); ?>

@@ -1,5 +1,12 @@
 <?php
-
+/*
+Theme Name: worthy
+Description: Based on free HTML template Worthy of http://www.htmlcoder.me
+Author: mthjn
+Author URI: http://github.com/mthjn
+Version: 0.0.1
+Template: twentyfifteen
+*/
 
 function register_footer_menus() {
   register_nav_menus(

@@ -38,10 +38,8 @@
 			</div>
 	</footer>
 
-	<!-- JavaScript files placed at the end of the document so the pages load faster
-	================================================== -->
+
 	<!-- Jquery and Bootstap core js files -->
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Modernizr javascript -->
@@ -50,8 +48,6 @@
 	<!-- Isotope javascript -->
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/isotope/isotope.pkgd.min.js"></script>
 
-	<!-- Backstretch javascript -->
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.backstretch.min.js"></script>
 
 	<!-- Appear javascript -->
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.appear.js"></script>

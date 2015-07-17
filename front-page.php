@@ -1,21 +1,23 @@
 <?php get_header(); ?>
-<!-- Page Header -->
-<!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('<?php echo get_template_directory_uri(); ?>-child/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                  <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-                    <hr class="small">
-                    <span class="subheading"> <?php echo $description; ?> </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
+<script>
+$(document).ready(function(){
+	$(".banner-image").backstretch('/wp-worthy/images/banner.jpg');
+});
+</script>
+<!--this needs a metabox -->
+			  <div id="banner" class="banner">
+			    <div class="banner-image"></div>
+			    <div class="banner-caption">
+			      <div class="container">
+			        <div class="row">
+			          <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+			            <h1 class="text-center">We are <span>Worthy</span></h1>
+			            <p class="lead text-center">Aperiam, sapiente libero ut at.</p>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
 <div id="content" class="site-content">
 <!-- Main Content -->
     <div class="container">
@@ -41,11 +43,7 @@
 							<?php	endwhile;	?>
 						<?php endif; ?>
 					<?php endif; ?>
-
-
-
-
-                <!-- Pager -->
+  <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                        <?php
@@ -62,6 +60,5 @@
     </div>
 
     <hr>
-
 
 <?php get_footer(); ?>
