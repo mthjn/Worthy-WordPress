@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="section translucent-bg bg-image-1 blue">
-	<div class="default-bg space blue">
+	<div class="default-bg space blue" style="margin-top: 21px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
