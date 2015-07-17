@@ -17,34 +17,62 @@
  */
 
 get_header(); ?>
+
+
+<!-- section start -->
+<!-- ================ -->
+<div class="section translucent-bg bg-image-1 blue">
+	<div class="container object-non-visible" data-animation-effect="fadeIn">
+		<h1 id="services"  class="text-center title">Recent Posts</h1>
+		<div class="space"></div>
+		<div class="row">
+			<div class="col-sm-6">
+
+
+				<?php if (is_home()) : ?>
+				<?php if (have_posts()) : ?>
+				<?php query_posts("showposts=5"); // show one latest post only ?>
+							<?php	while ( have_posts() ) : the_post(); ?>
+								<div class="media">
+									<div class="media-body text-right">
+										<a href="<?php the_permalink(); ?>">
+												<h4 class="media-heading">
+														<?php the_title(); ?>
+												</h4>
+												<p>
+													<?php the_excerpt(); ?>
+												</p>
+												<div class="media-right">
+													<i class="fa fa-cog"></i>
+												</div>
+										</a>
+										<p class="post-meta"> <?php the_date(); ?> </p>
+								</div>
+								<hr>
+							<?php	endwhile;	?>
+						<?php endif; ?>
+					<?php endif; ?>
+		</div>
+			<div class="space visible-xs"></div>
+			<div class="col-sm-6">
+				<div class="media">
+					<div class="media-left">
+						<i class="fa fa-leaf"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Service 5</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- section end -->
 <div class="container">
 		<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-		<?php if (is_home()) : ?>
-		<?php if (have_posts()) : ?>
-		<?php query_posts("showposts=5"); // show one latest post only ?>
-					<?php	while ( have_posts() ) : the_post(); ?>
-						<div class="post-preview">
-								<a href="<?php the_permalink(); ?>">
-										<h2 class="post-title">
-												<?php the_title(); ?>
-										</h2>
-										<h3 class="post-subtitle">
-											<?php the_excerpt(); ?>
-										</h3>
-								</a>
-								<p class="post-meta"> <?php the_date(); ?> </p>
-						</div>
-						<hr>
-					<?php	endwhile;	?>
-				<?php endif; ?>
-			<?php endif; ?>
-
-
-
-
-						<!-- Pager -->
+				<!-- Pager -->
 						<ul class="pager">
 								<li class="next">
 									<?php

@@ -38,14 +38,30 @@
 			</div>
 	</footer>
 
-	<!-- jQuery -->
-	<script src="<?php echo get_template_directory_uri(); ?>-child/js/jquery.js"></script>
+	<!-- JavaScript files placed at the end of the document so the pages load faster
+	================================================== -->
+	<!-- Jquery and Bootstap core js files -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap/js/bootstrap.min.js"></script>
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="<?php echo get_template_directory_uri(); ?>-child/js/bootstrap.min.js"></script>
+	<!-- Modernizr javascript -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/modernizr.js"></script>
 
-	<!-- Custom Theme JavaScript -->
-	<script src="<?php echo get_template_directory_uri(); ?>-child/js/clean-blog.min.js"></script>
+	<!-- Isotope javascript -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/isotope/isotope.pkgd.min.js"></script>
+
+	<!-- Backstretch javascript -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.backstretch.min.js"></script>
+
+	<!-- Appear javascript -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.appear.js"></script>
+
+	<!-- Initialization of Plugins -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/template.js"></script>
+
+	<!-- Custom Scripts -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
+
 
 </body>
 
