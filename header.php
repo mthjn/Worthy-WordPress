@@ -21,7 +21,6 @@
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/animations.css" rel="stylesheet">
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" rel="stylesheet">
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/colors.css" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/custom.css" rel="stylesheet">
 		<!-- JS -->
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.backstretch.min.js"></script>

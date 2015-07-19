@@ -62,8 +62,25 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
 
 	<?php if (is_home()) : ?>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/resize.js"></script>
+	<script>
+		window.addEventListener("load", function() {
+		  topResize( 'flush-top' );
+		  	topResize( 'flush-middle' );
+		  		topResize( 'flush-bottom' );
+		});
+		window.addEventListener("resize", function() {
+		  topResize( 'flush-top' );
+		  	topResize( 'flush-middle' );
+		  		topResize( 'flush-bottom' );
+		  topResizeOnresize( 'flush-top' );
+		  	topResizeOnresize( 'flush-middle' );
+		  		topResizeOnresize( 'flush-bottom' );
+		});
+	</script>
 	<?php endif; ?>
+
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/resize.js"></script>
+
 
 
 

@@ -4,7 +4,6 @@ $(document).ready(function(){
 	$(".banner-image").backstretch('<?php echo get_theme_mod( 'worthy-header' );?>');
 });
 </script>
-<!--this needs a metabox -->
 			  <div id="banner" class="banner">
 			    <div class="banner-image"></div>
 			    <div class="banner-caption">
@@ -28,7 +27,7 @@ $(document).ready(function(){
 
 				<?php if (is_home()) : ?>
 				  <?php if (have_posts()) : ?>
-				    <?php query_posts("showposts=5"); // show one latest post only ?>
+				    <?php query_posts("showposts=3"); // show one latest post only ?>
 							<?php	while ( have_posts() ) : the_post(); ?>
 								<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="post-preview">
@@ -51,7 +50,7 @@ $(document).ready(function(){
 												<i class="fa fa-paperclip"></i><i class="fa fa-paperclip"></i><i class="fa fa-paperclip"></i>
 											</a>
 									</div>
-									
+
                 </div>
 							</div>
 							<?php	endwhile;	?>
