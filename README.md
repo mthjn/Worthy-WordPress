@@ -1,4 +1,4 @@
-### worthy wordPress
+### worthy wordpress
   
 [dev]  
 
