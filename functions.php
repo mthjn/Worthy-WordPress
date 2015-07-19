@@ -8,6 +8,10 @@ Version: 0.0.1
 Template: twentyfifteen
 */
 
+
+/**
+  A| Navigations
+  */
 function register_footer_menus() {
   register_nav_menus(
     array(
@@ -48,6 +52,36 @@ class Top_Walker_Nav_Menu extends Walker_Nav_Menu {
     $output .= "\n$indent<ul class=\"sub-menu\">\n";
   }
 }
+
+
+/**
+ B| Post types
+ */
+
+
+ function portfolio_init() {
+     $args = array(
+        'public' => true,
+        'label'  => 'Portfolio',
+    		'publicly_queryable' => true,
+    		'show_ui'            => true,
+    		'show_in_menu'       => true,
+    		'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'p' ),
+    		'capability_type'    => 'post',
+    		'has_archive'        => true,
+    		'hierarchical'       => false,
+    		'menu_position'      => null,
+    		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+     );
+     register_post_type( 'portfolio', $args );
+ }
+ add_action( 'init', 'portfolio_init' );
+
+
+
+
+
 
 /*
 

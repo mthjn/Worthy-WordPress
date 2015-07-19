@@ -24,7 +24,7 @@
 						  	<h4 class="media-heading"><?php the_title(); ?></h4>
 							</a>
 						  <p><?php the_excerpt(); ?></p>
-							<a href="<?php the_permalink(); ?>"><div class="media-right"><i class="fa fa-paperclip"></i></a></div>
+							<a href="<?php the_permalink(); ?>"><div class="media-right"><i class="fa fa-paperclip"></i> Link</a></div>
 					  </div>
 					<hr>
 				<?php	endwhile;	?>
