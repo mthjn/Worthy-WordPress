@@ -12,6 +12,7 @@ Template: twentyfifteen
 
 
 /* general */
+.btn-default{border:0}
 .more-link{display:none;}
 a{color:#2A2929;text-decoration:none!important}
 a:hover,.post-preview>a:hover, .post-preview>a:focus{color:#ddd}
@@ -27,6 +28,7 @@ width: 100%;
 }
 /* header */
 .site-heading a {text-decoration:none;color:white}
-
+.modal-header,.modal-header h4{background:transparent!important;color:#333333;border-bottom:0}
+.modal-footer{border-top:0}
 /*footer*/
 .menu ul, .menu li, ul.menu {list-style-type: none;text-align: center;padding-left: 0;}

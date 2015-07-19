@@ -25,7 +25,19 @@
 		<!-- JS -->
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/jquery.backstretch.min.js"></script>
+
+		<?php	function custom_css() { ?>
+			<style type="text/css">
+			.blue,.text-colored,.btn-default,h1 span, h2 span, h3 span, h4 span,.main-navigation .navbar-default .navbar-nav > li > a:hover, .main-navigation .navbar-default .navbar-nav > li.active > a:hover	{ color: <?php echo get_theme_mod( 'link-color' ); ?> !important;}
+			.default-bg,.overlay,.btn-default:hover { background-color: <?php echo get_theme_mod( 'link-color' ); ?> !important;}
+			.translucent-bg.blue:after{background-color: <?php echo get_theme_mod( 'brandbg-color' ); ?> !important;}
+			</style>
+		<?php }	?>
+
+		<?php add_action('wp_head', 'custom_css'); ?>
+
 		<?php wp_head(); ?>
+
 	</head>
 		<body class="no-trans">
 			<div class="scrollToTop"><i class="icon-up-open-big"></i></div>

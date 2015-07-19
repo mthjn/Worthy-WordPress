@@ -8,7 +8,6 @@ Version: 0.0.1
 Template: twentyfifteen
 */
 
-
 /**
   A| Navigations
   */
@@ -328,3 +327,98 @@ function upsell() {
 }
 
 */
+
+
+
+
+function worthy_customizer( $wp_customize ) {
+
+
+    $wp_customize->add_section(
+        'worthy_section_one',
+        array(
+            'title' => 'Worthy Settings',
+            'description' => 'This is for the copyright section.',
+            'priority' => 35,
+        )
+    );
+
+          $wp_customize->add_setting(
+          'copyright_textbox',
+          array('default' => 'Default copyright text',)
+          );
+          $wp_customize->add_setting(
+              'link-color',
+              array(
+                  'default' => '#000000',
+                  'sanitize_callback' => 'sanitize_hex_color',
+              )
+          );
+          $wp_customize->add_setting(
+          'brandbg-color',
+          array('default' => 'rgba(85, 172, 238, 0.7)',)
+          );
+          $wp_customize->add_setting( 'worthy-header' );
+          $wp_customize->add_setting(
+          'header-title',
+          array('default' => '<h1>We are <span>worthy</span></h1><p class="lead">And we can</p>',)
+          );
+
+          $wp_customize->add_control(
+              'copyright_textbox',
+              array(
+                  'label' => 'Copyright text',
+                  'section' => 'worthy_section_one',
+                  'type' => 'text',
+              )
+          );
+          $wp_customize->add_control(
+              'brandbg-color',
+              array(
+                  'label' => 'Transparent background color for bg overlay in category listings:',
+                  'section' => 'worthy_section_one',
+                  'type' => 'text',
+              )
+          );
+          $wp_customize->add_control(
+              new WP_Customize_Color_Control(
+                  $wp_customize,
+                  'link-color',
+                  array(
+                      'label' => 'Main brand link color',
+                      'section' => 'worthy_section_one',
+                      'settings' => 'link-color',
+                  )
+              )
+          );
+
+
+          $wp_customize->add_control(
+              new WP_Customize_Image_Control(
+                  $wp_customize,
+                  'worthy-header',
+                  array(
+                      'label' => 'Worthy Header Image Upload',
+                      'section' => 'worthy_section_one',
+                      'settings' => 'worthy-header'
+                  )
+              )
+          );
+          $wp_customize->add_control(
+              'header-title',
+              array(
+                  'label' => 'Text/HTML for front page header image',
+                  'section' => 'worthy_section_one',
+                  'type' => 'textarea',
+              )
+          );
+
+
+
+
+
+} // customize
+
+//.text-colored
+
+add_action( 'customize_register', 'worthy_customizer' );

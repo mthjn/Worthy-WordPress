@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <script>
 $(document).ready(function(){
-	$(".banner-image").backstretch('/wp-worthy/images/banner.jpg');
+	$(".banner-image").backstretch('<?php echo get_theme_mod( 'worthy-header' );?>');
 });
 </script>
 <!--this needs a metabox -->
@@ -11,8 +11,9 @@ $(document).ready(function(){
 			      <div class="container">
 			        <div class="row">
 			          <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-			            <h1 class="text-center">We are <span>Worthy</span></h1>
-			            <p class="lead text-center">Aperiam, sapiente libero ut at.</p>
+									<div class="text-center">
+										<?php echo get_theme_mod( 'header-title' );?>
+									</div>
 			          </div>
 			        </div>
 			      </div>
@@ -38,7 +39,7 @@ $(document).ready(function(){
 													<?php the_excerpt(); ?>
                         </p>
 
-                    <p class="post-meta"> <?php the_date(); ?> <a href="<?php the_permalink(); ?>"> | <i class="fa fa-paperclip"></i> Link | </a></p>
+                    <p class="post-meta"><a href="<?php the_permalink(); ?>"><i class="fa fa-paperclip"></i> Link</a> &nbsp;&nbsp;&nbsp;  <?php the_date(); ?> </p>
                 </div>
                 <hr>
 							<?php	endwhile;	?>

@@ -32,7 +32,10 @@
 													</a>
 											</li>
 									</ul>
-									<p class="copyright text-muted"><!-- <?php get_search_form( ); ?> |  --> <?php wp_footer(); ?> </p>
+									<p class="copyright text-muted"><?php wp_footer(); ?></p>
+									<p class="copyright text-muted">
+										<?php echo get_theme_mod( 'copyright_textbox', 'No copyright information has been saved yet.' ); ?>
+									</p>
 							</div>
 					</div>
 			</div>
