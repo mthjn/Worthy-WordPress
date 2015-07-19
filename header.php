@@ -28,7 +28,7 @@
 
 		<?php	function custom_css() { ?>
 			<style type="text/css">
-			.blue,.text-colored,.btn-default,h1 span, h2 span, h3 span, h4 span,.main-navigation .navbar-default .navbar-nav > li > a:hover, .main-navigation .navbar-default .navbar-nav > li.active > a:hover	{ color: <?php echo get_theme_mod( 'link-color' ); ?> !important;}
+			.blue,.text-colored,h1 span, h2 span, h3 span, h4 span,.main-navigation .navbar-default .navbar-nav > li > a:hover, .main-navigation .navbar-default .navbar-nav > li.active > a:hover	{ color: <?php echo get_theme_mod( 'link-color' ); ?> !important;}
 			.default-bg,.overlay,.btn-default:hover { background-color: <?php echo get_theme_mod( 'link-color' ); ?> !important;}
 			.translucent-bg.blue:after{background-color: <?php echo get_theme_mod( 'brandbg-color' ); ?> !important;}
 			</style>
@@ -47,7 +47,9 @@
 						<div class="col-md-4">
 							<div class="header-left clearfix">
 								<div class="logo smooth-scroll">
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Worthy"></a>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+										<img id="logo" src="<?php echo get_theme_mod( 'worthy-logo' );?>" alt="Worthy">
+									</a>
 								</div>
 								<div class="site-name-and-slogan smooth-scroll">
 									<div class="site-name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></div>

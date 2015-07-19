@@ -33,7 +33,7 @@
 											</li>
 									</ul>
 									<p class="copyright text-muted"><?php wp_footer(); ?></p>
-									<p class="copyright text-muted">
+									<p class="copyright text-muted text-center">
 										<?php echo get_theme_mod( 'copyright_textbox', 'No copyright information has been saved yet.' ); ?>
 									</p>
 							</div>
@@ -60,6 +60,11 @@
 
 	<!-- Custom Scripts -->
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
+
+	<?php if (is_home()) : ?>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/resize.js"></script>
+	<?php endif; ?>
+
 
 
 </body>

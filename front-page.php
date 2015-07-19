@@ -21,31 +21,42 @@ $(document).ready(function(){
 			  </div>
 <div id="content" class="site-content">
 <!-- Main Content -->
+<div class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
 
 				<?php if (is_home()) : ?>
-				<?php if (have_posts()) : ?>
-				<?php query_posts("showposts=5"); // show one latest post only ?>
+				  <?php if (have_posts()) : ?>
+				    <?php query_posts("showposts=5"); // show one latest post only ?>
 							<?php	while ( have_posts() ) : the_post(); ?>
+								<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="post-preview">
+
+									<div class="flush-top">
                     <a href="<?php the_permalink(); ?>">
                         <h2 class="post-title">
-													<i class="fa fa-caret-right pr-10 text-colored"></i> <?php the_title(); ?>
+													<?php the_title(); ?>
                         </h2>
 										</a>
-                        <p class="lead">
-													<?php the_excerpt(); ?>
-                        </p>
+										<div class="post-meta"><?php the_date(); ?></div>
+									</div>
 
-                    <p class="post-meta"><a href="<?php the_permalink(); ?>"><i class="fa fa-paperclip"></i> Link</a> &nbsp;&nbsp;&nbsp;  <?php the_date(); ?> </p>
+									<div class="flush-middle">
+                    <p class="lead"><?php the_excerpt(); ?></p>
+									</div>
+
+									<div class="text-center flush-bottom">
+											<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-default" data-dismiss="modal">
+												<i class="fa fa-paperclip"></i><i class="fa fa-paperclip"></i><i class="fa fa-paperclip"></i>
+											</a>
+									</div>
+									
                 </div>
-                <hr>
+							</div>
 							<?php	endwhile;	?>
 						<?php endif; ?>
 					<?php endif; ?>
-  <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                        <?php
@@ -59,7 +70,7 @@ $(document).ready(function(){
                 </ul>
             </div>
         </div>
-    </div>
+</div>
 
     <hr>
 

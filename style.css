@@ -12,7 +12,8 @@ Template: twentyfifteen
 
 
 /* general */
-.btn-default{border:0}
+.btn-default{border:0;color:#333!important}
+.btn-default:hover{color:white!important}
 .more-link{display:none;}
 a{color:#2A2929;text-decoration:none!important}
 a:hover,.post-preview>a:hover, .post-preview>a:focus{color:#ddd}

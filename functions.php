@@ -359,6 +359,7 @@ function worthy_customizer( $wp_customize ) {
           array('default' => 'rgba(85, 172, 238, 0.7)',)
           );
           $wp_customize->add_setting( 'worthy-header' );
+          $wp_customize->add_setting( 'worthy-logo' );
           $wp_customize->add_setting(
           'header-title',
           array('default' => '<h1>We are <span>worthy</span></h1><p class="lead">And we can</p>',)
@@ -401,6 +402,17 @@ function worthy_customizer( $wp_customize ) {
                       'label' => 'Worthy Header Image Upload',
                       'section' => 'worthy_section_one',
                       'settings' => 'worthy-header'
+                  )
+              )
+          );
+          $wp_customize->add_control(
+              new WP_Customize_Image_Control(
+                  $wp_customize,
+                  'worthy-logo',
+                  array(
+                      'label' => 'Worthy Navbar Logo Image Upload',
+                      'section' => 'worthy_section_one',
+                      'settings' => 'worthy-logo'
                   )
               )
           );
