@@ -18,6 +18,7 @@ Template: twentyfifteen
 
 // shortcodes
 require_once("plugins/shortcodes.php");
+require_once("plugins/admin/admin_edits.php");
 
 
 /**
