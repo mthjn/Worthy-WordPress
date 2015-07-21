@@ -61,197 +61,96 @@ retina login logo
     /* make sure to replace this! */ } }
 
 
-/*  make custom login with material button!!!*/
-/*<button class="c-button c-button--purple" type="button">
-  <div class="c-ripple js-ripple">
-    <span class="c-ripple__circle"></span>
-  </div>
-  Material Design Ripple Effect
-</button>
-
-
-(function($, window, document, undefined) {
-
-  'use strict';
-
-  var $ripple = $('.js-ripple');
-
-  $ripple.on('click.ui.ripple', function(e) {
-
-    var $this = $(this);
-    var $offset = $this.parent().offset();
-    var $circle = $this.find('.c-ripple__circle');
-
-    var x = e.pageX - $offset.left;
-    var y = e.pageY - $offset.top;
-
-    $circle.css({
-      top: y + 'px',
-      left: x + 'px'
-    });
-
-    $this.addClass('is-active');
-
-  });
-
-  $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
-    $(this).removeClass('is-active');
-  });
-
-})(jQuery, window, document);
-*/
-
     /**
-     * @link http://codepen.io/KrisOlszewski/pen/Dnktj
-     * Object: Divider
-     * --------------------------------------------------
-     */
-    .o-divider {
-      border: 0;
-      margin: 20px;
-      height: 1px;
-      background: #656D78;
+    *
+    * ----- the button
+    *
+    */
+    .wp-core-ui .button-primary,
+    .wp-core-ui .button-primary, .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover
+     {
+    background-color: #ff7a7a;
+    display: inline-block;
+    overflow: hidden;
+    }
+   .wp-core-ui .button-primary, .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    cursor: pointer;
+    }
+    .button:after {
+    -webkit-transform: scale(1) translateZ(0);
+    -moz-transform: scale(1) translateZ(0);
+    -ms-transform: scale(1) translateZ(0);
+    -o-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     }
 
-    /**
-     * Component: Button
-     * --------------------------------------------------
-     */
-    .c-button {
-      -webkit-appearance: none;
-      position: relative;
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 0;
-      vertical-align: middle;
-      overflow: visible;
-      color: #fff;
-      font: inherit;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: 1px;
-      background: transparent;
-      border: 0;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-      box-shadow: 2px 2px 0 0 #383e46;
-      -webkit-transition: all 0.2s ease;
-              transition: all 0.2s ease;
+    [class*="button"] {
+    color: rgb(245, 245, 255);
+    position: relative;
+    z-index: 10;
     }
-    .c-button:hover, .c-button:focus {
-      outline: 0;
-      text-decoration: none;
-    }
-    .c-button:not(:disabled) {
-      cursor: pointer;
+    [class*="button"]:after {
+    content: "";
+    width: 150%;
+    height: 0;
+    padding-top: 150%;
+    object-fit: contain;
+    background-color: #80808C;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75%;
+    opacity: 1;
+    border-radius: 50%;
+    -webkit-transform: scale(0) translateZ(0);
+    -moz-transform: scale(0) translateZ(0);
+    -ms-transform: scale(0) translateZ(0);
+    -o-transform: scale(0) translateZ(0);
+    transform: scale(0) translateZ(0);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: -1;
     }
 
-    /**
-     * Mixin: Button Modifier
-     * --------------------------------------------------
-     */
-    /**
-     * Component: Button
-     * Modifier: Purple
-     * --------------------------------------------------
-     */
-    .c-button--purple {
-      background: #967ADC;
-      text-shadow: 2px 2px 0 #7652d1;
-    }
-    .c-button--purple:hover {
-      background: #8666d7;
+    .button:after {
+    -webkit-animation: scaler 1.5s ease infinite alternate;
+    -moz-animation: scaler 1.5s ease infinite alternate;
+    animation: scaler 1.5s ease infinite alternate;
     }
 
-    /**
-     * Component: Button
-     * Modifier: Blue
-     * --------------------------------------------------
-     */
-    .c-button--blue {
-      background: #4A89DC;
-      text-shadow: 2px 2px 0 #276ecc;
+    @-webkit-keyframes scaler {
+    0%, 50% {
+      -webkit-transform: scale(0) translateZ(0);
     }
-    .c-button--blue:hover {
-      background: #357bd8;
+    100% {
+      -webkit-transform: scale(1) translateZ(0);
     }
-
-    /**
-     * Component: Button
-     * Modifier: Red
-     * --------------------------------------------------
-     */
-    .c-button--red {
-      background: #E9573F;
-      text-shadow: 2px 2px 0 #dc3519;
     }
-    .c-button--red:hover {
-      background: #e64328;
+    @-moz-keyframes scaler {
+    0%, 50% {
+      -moz-transform: scale(0) translateZ(0);
     }
-
-    /**
-     * Utility: Ripple
-     * --------------------------------------------------
-     */
-    .c-ripple {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: transparent;
+    100% {
+      -moz-transform: scale(1) translateZ(0);
     }
-
-    .c-ripple__circle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      opacity: 0;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.25);
     }
-    .c-ripple.is-active .c-ripple__circle {
-      -webkit-animation: a-ripple .4s ease-in;
-              animation: a-ripple .4s ease-in;
+    @keyframes scaler {
+    0%, 50% {
+      -webkit-transform: scale(0) translateZ(0);
+      -moz-transform: scale(0) translateZ(0);
+      -ms-transform: scale(0) translateZ(0);
+      -o-transform: scale(0) translateZ(0);
+      transform: scale(0) translateZ(0);
     }
-
-    /**
-     * Animation: Ripple
-     * --------------------------------------------------
-     */
-    @-webkit-keyframes a-ripple {
-      0% {
-        opacity: 0;
-      }
-      25% {
-        opacity: 1;
-      }
-      100% {
-        width: 200%;
-        padding-bottom: 200%;
-        opacity: 0;
-      }
+    100% {
+      -webkit-transform: scale(1) translateZ(0);
+      -moz-transform: scale(1) translateZ(0);
+      -ms-transform: scale(1) translateZ(0);
+      -o-transform: scale(1) translateZ(0);
+      transform: scale(1) translateZ(0);
     }
-    @keyframes a-ripple {
-      0% {
-        opacity: 0;
-      }
-      25% {
-        opacity: 1;
-      }
-      100% {
-        width: 200%;
-        padding-bottom: 200%;
-        opacity: 0;
-      }
     }
