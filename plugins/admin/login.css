@@ -1,10 +1,11 @@
 body {
-  background:url("https://sinatra-templating.herokuapp.com/img/polygon-background7.jpg");
+  /* FIXME make sure to replace this! */
+  background:url("SomeBg.jpg");
   background-size: cover;
 }
 .login h1 a {
-  background: url("http://localhost/wp-worthy/wp-content/uploads/2015/07/SomeLogo.png") no-repeat top center;
-  /* make sure to replace this! */
+  /* FIXME make sure to replace this! */
+  background: url("SomeLogo.png") no-repeat top center;
   width: 326px;
   height: 67px;
   text-indent: -9999px;
@@ -57,7 +58,7 @@ retina login logo
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .login h1 a {
-    background: url("http://localhost/wp-worthy/wp-content/uploads/2015/07/SomeLogo.png") no-repeat top center;
+    background: url("SomeLogo.png") no-repeat top center;
     /* make sure to replace this! */ } }
 
 
@@ -85,72 +86,4 @@ retina login logo
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    }
-
-    [class*="button"] {
-    color: rgb(245, 245, 255);
-    position: relative;
-    z-index: 10;
-    }
-    [class*="button"]:after {
-    content: "";
-    width: 150%;
-    height: 0;
-    padding-top: 150%;
-    object-fit: contain;
-    background-color: #80808C;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -75%;
-    opacity: 1;
-    border-radius: 50%;
-    -webkit-transform: scale(0) translateZ(0);
-    -moz-transform: scale(0) translateZ(0);
-    -ms-transform: scale(0) translateZ(0);
-    -o-transform: scale(0) translateZ(0);
-    transform: scale(0) translateZ(0);
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    z-index: -1;
-    }
-
-    .button:after {
-    -webkit-animation: scaler 1.5s ease infinite alternate;
-    -moz-animation: scaler 1.5s ease infinite alternate;
-    animation: scaler 1.5s ease infinite alternate;
-    }
-
-    @-webkit-keyframes scaler {
-    0%, 50% {
-      -webkit-transform: scale(0) translateZ(0);
-    }
-    100% {
-      -webkit-transform: scale(1) translateZ(0);
-    }
-    }
-    @-moz-keyframes scaler {
-    0%, 50% {
-      -moz-transform: scale(0) translateZ(0);
-    }
-    100% {
-      -moz-transform: scale(1) translateZ(0);
-    }
-    }
-    @keyframes scaler {
-    0%, 50% {
-      -webkit-transform: scale(0) translateZ(0);
-      -moz-transform: scale(0) translateZ(0);
-      -ms-transform: scale(0) translateZ(0);
-      -o-transform: scale(0) translateZ(0);
-      transform: scale(0) translateZ(0);
-    }
-    100% {
-      -webkit-transform: scale(1) translateZ(0);
-      -moz-transform: scale(1) translateZ(0);
-      -ms-transform: scale(1) translateZ(0);
-      -o-transform: scale(1) translateZ(0);
-      transform: scale(1) translateZ(0);
-    }
     }
