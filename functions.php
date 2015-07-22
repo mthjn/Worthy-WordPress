@@ -100,6 +100,43 @@ class Top_Walker_Nav_Menu extends Walker_Nav_Menu {
  add_action( 'init', 'portfolio_init' );
 
 
+/**
+*
+*
+  C| Widgets
+*
+*
+*/
+
+function worthy_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer left',
+		'id'            => 'footer_left',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="text-center title">',
+		'after_title'   => '</h4>',
+	) );
+  register_sidebar( array(
+    'name'          => 'Footer middle',
+    'id'            => 'footer_middle',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="text-center title">',
+    'after_title'   => '</h4>',
+  ) );
+  register_sidebar( array(
+    'name'          => 'Footer right',
+    'id'            => 'footer_right',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="text-center title">',
+    'after_title'   => '</h4>',
+  ) );
+
+}
+add_action( 'widgets_init', 'worthy_widgets_init' );
 
 /**
 *
